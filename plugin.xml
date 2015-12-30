@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="co.airsia.cordova.pingpp"
+        id="so.cubic.cordova.pingpp"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        version="0.0.5">
+        version="0.0.6">
 
     <name>Pingpp</name>
 
@@ -40,22 +40,21 @@
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
             <uses-permission android:name="android.permission.READ_PHONE_STATE" />
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-            <uses-permission android:name="android.permission.SEND_SMS" />
-            <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-            <uses-permission android:name="android.permission.READ_SMS" />
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="application">
+            <!-- Ping++ sdk -->
             <activity
                     android:name="com.pingplusplus.android.PaymentActivity"
+                    android:configChanges="orientation|screenSize"
                     android:launchMode="singleTop"
                     android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            <!-- 微信支付 sdk ，也是 Ping++ sdk 调用入口 -->
             <activity-alias
                     android:name=".wxapi.WXPayEntryActivity"
                     android:exported="true"
                     android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+            <!-- 支付宝 sdk -->
             <activity
                     android:name="com.alipay.sdk.app.H5PayActivity"
                     android:configChanges="orientation|keyboardHidden|navigation"
@@ -66,15 +65,23 @@
                     android:configChanges="orientation|keyboardHidden|navigation"
                     android:exported="false"
                     android:screenOrientation="behind" />
+
+
+            <!-- 银联支付 sdk -->
+            <activity android:name="com.unionpay.uppay.PayActivity" />
         </config-file>
 
         <source-file src="src/android/PingppPlugin.java" target-dir="src/co/airsia/cordova/"/>
-        <source-file src="libs/android/alipaysdk.jar" target-dir="libs" framework="true"/>
-        <source-file src="libs/android/alipaysecsdk.jar" target-dir="libs" framework="true"/>
-        <source-file src="libs/android/alipayutdid.jar" target-dir="libs" framework="true"/>
+        <source-file src="libs/android/assets/data.bin" target-dir="assets"/>
+        <source-file src="libs/android/alipaySDK-20150818.jar" target-dir="libs" framework="true"/>
+        <source-file src="libs/android/armeabi/libentryex.so" target-dir="libs/armeabi"/>
+        <source-file src="libs/android/armeabi-v7a/libentryex.so" target-dir="libs/armeabi-v7a"/>
+        <source-file src="libs/android/arm64-v8a/libentryex.so" target-dir="libs/arm64-v8a"/>
+        <source-file src="libs/android/x86/libentryex.so" target-dir="libs/x86"/>
         <source-file src="libs/android/libammsdk.jar" target-dir="libs" framework="true"/>
-        <source-file src="libs/android/libpingpp.jar" target-dir="libs" framework="true"/>
+        <source-file src="libs/android/libpingpp-2.0.6.jar" target-dir="libs" framework="true"/>
         <source-file src="libs/android/UPPayAssistEx.jar" target-dir="libs" framework="true"/>
+        <source-file src="libs/android/UPPayPluginEx.jar" target-dir="libs" framework="true"/>
     </platform>
     <platform name="ios">
         <!-- framework -->
