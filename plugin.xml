@@ -93,6 +93,9 @@
         <framework src="libsqlite3.0.dylib" />
 
         <!-- Channels -->
+        <!-- Network -->
+        <source-file src="libs/ios/Channels/Network/libpingpp+network.a" framework="true"/>
+        <header-file src="libs/ios/Channels/Network/PingppURLResponse.h" />
         <!-- Alipay -->
         <resource-file src="libs/ios/Channels/Alipay/AlipaySDK.bundle"/>
         <framework src="libs/ios/Channels/Alipay/AlipaySDK.framework" custom="true"/>
