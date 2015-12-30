@@ -7,19 +7,13 @@
 Install the plugin
 
 ```sh
-# 暂未上传 cordova 插件库 请先从 github 或 coding 安装
+# 暂未上传 cordova 插件库 请先从 github 安装
 ```
 
-or install form github
+install form github
 
 ```sh
-$ cordova plugin add https://github.com/TongChia/cordova-plugin-pingpp.git --variable URL_SCHEME=YOUR-URL-SCHEME
-```
-
-form coding.net
-
-```sh
-$ cordova plugin add https://git.coding.net/tongchia/cordova-plugin-pingpp.git --variable URL_SCHEME=YOUR-URL-SCHEME
+$ cordova plugin add https://github.com/sourbell/cordova-plugin-pingpp.git --variable URL_SCHEME=YOUR-URL-SCHEME
 ```
 
 javascript
@@ -60,7 +54,7 @@ Base on pingpp native sdk
 [pingpp-android](https://github.com/PingPlusPlus/pingpp-android)
 
 ### Issues
-[issues](https://github.com/TongChia/cordova-plugin-pingpp/issues)
+[issues](https://github.com/sourbell/cordova-plugin-pingpp/issues)
 
 #### 如果本插件给您或您的公司带来帮助 请别忘记点击右上角的【Star】
 
