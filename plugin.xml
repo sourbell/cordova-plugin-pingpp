@@ -103,7 +103,7 @@
 
         <!-- pingxx -->
         <resource-file src="libs/ios/Pingpp.bundle"/>
-        <source-file src="libs/ios/libpingpp.a" framework="true"/>
+        <source-file src="libs/ios/libpingppcore.a" framework="true"/>
         <header-file src="libs/ios/Pingpp.h"/>
 
         <config-file target="*-Info.plist" parent="CFBundleURLTypes">
