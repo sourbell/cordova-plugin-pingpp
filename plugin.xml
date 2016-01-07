@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="so.cubic.cordova.pingpp"
+        id="cordova-plugin-pingpp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         version="0.0.6">
 
